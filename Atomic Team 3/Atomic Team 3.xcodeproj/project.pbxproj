@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DCF132E727FDB5AE00B89229 /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132E627FDB5AE00B89229 /* EditGoalViewController.swift */; };
-		DCF132E927FDB74800B89229 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132E827FDB74800B89229 /* TextField.swift */; };
-		DCF132EB27FDCA6200B89229 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132EA27FDCA6200B89229 /* SetGoalViewController.swift */; };
 		DE12F08427FBEFDF003A0FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F08327FBEFDF003A0FB0 /* AppDelegate.swift */; };
 		DE12F08627FBEFDF003A0FB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F08527FBEFDF003A0FB0 /* SceneDelegate.swift */; };
 		DE12F08827FBEFDF003A0FB0 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F08727FBEFDF003A0FB0 /* OnboardViewController.swift */; };
@@ -22,9 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DCF132E627FDB5AE00B89229 /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
-		DCF132E827FDB74800B89229 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		DCF132EA27FDCA6200B89229 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		DE12F08027FBEFDF003A0FB0 /* Atomic Team 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atomic Team 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE12F08327FBEFDF003A0FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE12F08527FBEFDF003A0FB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +64,6 @@
 			children = (
 				DE12F08327FBEFDF003A0FB0 /* AppDelegate.swift */,
 				DE12F08527FBEFDF003A0FB0 /* SceneDelegate.swift */,
-				DCF132E827FDB74800B89229 /* TextField.swift */,
 				DEB351F227FC48B400A5E0B5 /* Controller */,
 				DEB351EF27FC487C00A5E0B5 /* View */,
 				DEB351EE27FC487500A5E0B5 /* Model */,
@@ -103,8 +96,6 @@
 			children = (
 				DE12F08727FBEFDF003A0FB0 /* OnboardViewController.swift */,
 				DE80133E27FD34D200901385 /* TimerViewController.swift */,
-				DCF132E627FDB5AE00B89229 /* EditGoalViewController.swift */,
-				DCF132EA27FDCA6200B89229 /* SetGoalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,11 +174,8 @@
 				DE12F08827FBEFDF003A0FB0 /* OnboardViewController.swift in Sources */,
 				DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */,
 				DE12F08427FBEFDF003A0FB0 /* AppDelegate.swift in Sources */,
-				DCF132E927FDB74800B89229 /* TextField.swift in Sources */,
 				DE12F08627FBEFDF003A0FB0 /* SceneDelegate.swift in Sources */,
 				DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */,
-				DCF132E727FDB5AE00B89229 /* EditGoalViewController.swift in Sources */,
-				DCF132EB27FDCA6200B89229 /* SetGoalViewController.swift in Sources */,
 				DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
