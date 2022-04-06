@@ -13,6 +13,7 @@
 		DE12F08B27FBEFDF003A0FB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12F08927FBEFDF003A0FB0 /* Main.storyboard */; };
 		DE12F08D27FBEFE1003A0FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F08C27FBEFE1003A0FB0 /* Assets.xcassets */; };
 		DE12F09027FBEFE1003A0FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12F08E27FBEFE1003A0FB0 /* LaunchScreen.storyboard */; };
+		DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80133E27FD34D200901385 /* TimerViewController.swift */; };
 		DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351EC27FC482D00A5E0B5 /* Onboard.swift */; };
 		DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		DE12F08C27FBEFE1003A0FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE12F08F27FBEFE1003A0FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE12F09127FBEFE1003A0FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE80133E27FD34D200901385 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		DEB351EC27FC482D00A5E0B5 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DE12F08727FBEFDF003A0FB0 /* OnboardViewController.swift */,
+				DE80133E27FD34D200901385 /* TimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */,
 				DE12F08427FBEFDF003A0FB0 /* AppDelegate.swift in Sources */,
 				DE12F08627FBEFDF003A0FB0 /* SceneDelegate.swift in Sources */,
+				DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */,
 				DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@ class OnboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        pageControl.sizeToFit()
         pageControl.isUserInteractionEnabled = false
         
         print(pageControl.numberOfPages)
