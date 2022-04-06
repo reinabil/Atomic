@@ -16,6 +16,7 @@
 		DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80133E27FD34D200901385 /* TimerViewController.swift */; };
 		DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351EC27FC482D00A5E0B5 /* Onboard.swift */; };
 		DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */; };
+		FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E3DC627FD925500096630 /* LatestPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DE80133E27FD34D200901385 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		DEB351EC27FC482D00A5E0B5 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBrain.swift; sourceTree = "<group>"; };
+		FB5E3DC627FD925500096630 /* LatestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				DE12F08727FBEFDF003A0FB0 /* OnboardViewController.swift */,
 				DE80133E27FD34D200901385 /* TimerViewController.swift */,
+				FB5E3DC627FD925500096630 /* LatestPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				DE12F08827FBEFDF003A0FB0 /* OnboardViewController.swift in Sources */,
 				DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */,
+				FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */,
 				DE12F08427FBEFDF003A0FB0 /* AppDelegate.swift in Sources */,
 				DE12F08627FBEFDF003A0FB0 /* SceneDelegate.swift in Sources */,
 				DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */,
