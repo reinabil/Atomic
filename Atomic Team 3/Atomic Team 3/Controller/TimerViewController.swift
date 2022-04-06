@@ -60,8 +60,6 @@ class TimerViewController: UIViewController {
     @IBAction func playPressed(_ sender: UIButton) {
         
         // TIMER PLAY
-        
-        
         if timerCounting {
             timerCounting = false
             timer.invalidate()
