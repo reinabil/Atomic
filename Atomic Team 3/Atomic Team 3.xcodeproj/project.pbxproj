@@ -68,7 +68,6 @@
 				DEB351EF27FC487C00A5E0B5 /* View */,
 				DEB351EE27FC487500A5E0B5 /* Model */,
 				DE12F08C27FBEFE1003A0FB0 /* Assets.xcassets */,
-				DE12F08E27FBEFE1003A0FB0 /* LaunchScreen.storyboard */,
 				DE12F09127FBEFE1003A0FB0 /* Info.plist */,
 			);
 			path = "Atomic Team 3";
@@ -86,6 +85,7 @@
 		DEB351EF27FC487C00A5E0B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE12F08E27FBEFE1003A0FB0 /* LaunchScreen.storyboard */,
 				DE12F08927FBEFDF003A0FB0 /* Main.storyboard */,
 			);
 			path = View;
