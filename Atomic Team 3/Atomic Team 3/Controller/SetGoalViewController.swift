@@ -12,10 +12,41 @@ class SetGoalViewController: UIViewController {
     
     @IBOutlet weak var bookTitleTextField: UITextField!
     @IBOutlet weak var totalPagesTextField: UITextField!
+    @IBOutlet weak var readingTimeTargetPicker: UIDatePicker!
+    
+    let userDefault = UserDefaults.standard
+    var bookTitle:String = ""
+    var totalPages:Int = 0
+    var readingTimeTarget = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        bookTitle = bookTitleTextField.text
+//        totalPages = Int(totalPagesTextField.text)
+        
+        if validateBookTitle() && validateTotalPages() {
+            
+        }
+        
+        userDefault.set(bookTitle, forKey: "bookTitle")
+        userDefault.set(totalPages, forKey: "totalPages")
+    }
+    
+    func validateBookTitle() -> Bool {
+        if bookTitle.isEmpty {
+            return false
+        }
+        
+        return true
+    }
+    
+    func validateTotalPages() -> Bool {
+//        if totalPages is Int || totalPages <= 0{
+//            return false
+//        }
+        
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {

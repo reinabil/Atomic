@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RPp-pl-ibA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Isb-iL-QHp">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -508,6 +508,7 @@
                     <navigationItem key="navigationItem" id="7NI-4r-3kl"/>
                     <connections>
                         <outlet property="bookTitleTextField" destination="dyP-tk-cqJ" id="UGN-jX-Hfm"/>
+                        <outlet property="readingTimeTargetPicker" destination="PT5-iW-3iC" id="aeH-rG-1qZ"/>
                         <outlet property="totalPagesTextField" destination="e0S-ET-6JH" id="Jj3-T3-FdP"/>
                     </connections>
                 </viewController>
@@ -542,9 +543,10 @@
                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Atomic Book" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-zm-jUP" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Atomic Book" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-zm-jUP" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="154" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -555,9 +557,10 @@
                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="538" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Btw-jH-XH3" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="538" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Btw-jH-XH3" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="256" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -580,6 +583,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="main_orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="Isb-iL-QHp" eventType="touchUpInside" id="lF7-kq-W7V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFa-e2-mOs">
                                 <rect key="frame" x="20" y="633" width="350" height="50"/>
@@ -590,6 +596,9 @@
                                     <color key="baseForegroundColor" name="main_orange"/>
                                     <color key="baseBackgroundColor" name="secondary_orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="Isb-iL-QHp" eventType="touchUpInside" id="ZkH-sA-TJf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7zq-CD-PXE"/>
@@ -597,6 +606,7 @@
                     </view>
                     <connections>
                         <outlet property="bookTitleTextField" destination="vyz-zm-jUP" id="8Kz-CW-8hP"/>
+                        <outlet property="readingTimeTargetPicker" destination="wiL-6U-ya1" id="tkA-Qe-tyu"/>
                         <outlet property="totalPageTextField" destination="Btw-jH-XH3" id="HR6-QE-BtS"/>
                     </connections>
                 </viewController>
@@ -610,15 +620,14 @@
         <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="empty_goal" width="258" height="263"/>
         <image name="little_step" width="302" height="281"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="onboard_1" width="116.66666412353516" height="128.33332824707031"/>
         <image name="pause" catalog="system" width="88" height="128"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="streak_emoji" width="52" height="52"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="streak_emoji" width="52" height="52"/>
         <image name="timer" width="85" height="84"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
