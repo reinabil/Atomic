@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DC849F282803C25600B0D524 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC849F272803C25600B0D524 /* Goal.swift */; };
-		DC849F2A2803C37500B0D524 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC849F292803C37500B0D524 /* UserDefaultExtension.swift */; };
 		DCF132ED27FDE3A000B89229 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132EC27FDE3A000B89229 /* TextField.swift */; };
 		DCF132EF27FDE3D100B89229 /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132EE27FDE3D100B89229 /* EditGoalViewController.swift */; };
 		DCF132F127FDE3DF00B89229 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132F027FDE3DF00B89229 /* SetGoalViewController.swift */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		DC849F272803C25600B0D524 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
-		DC849F292803C37500B0D524 /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		DCF132EC27FDE3A000B89229 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DCF132EE27FDE3D100B89229 /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
 		DCF132F027FDE3DF00B89229 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				DEB351EC27FC482D00A5E0B5 /* Onboard.swift */,
 				DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */,
 				DC849F272803C25600B0D524 /* Goal.swift */,
-				DC849F292803C37500B0D524 /* UserDefaultExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,7 +206,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC849F2A2803C37500B0D524 /* UserDefaultExtension.swift in Sources */,
 				DE12F08827FBEFDF003A0FB0 /* OnboardViewController.swift in Sources */,
 				DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */,
 				FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */,

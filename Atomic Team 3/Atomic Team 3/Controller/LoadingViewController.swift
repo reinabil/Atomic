@@ -9,11 +9,10 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     private var isOnboardingSeen: Bool!
-    private var storageManager  = StorageManager()
     
     private let navigationManager = Navigationmanager()
     override func viewDidLoad() {
-        isOnboardingSeen = storageManager.onboardingSeen()
+        isOnboardingSeen = UserDefaults.standard.onboardingSeen()
     }
     
     override func viewDidAppear(_ animated: Bool) {

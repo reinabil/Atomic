@@ -11,4 +11,6 @@ struct Goal: Codable {
     let bookTitle: String
     let totalPages: String
     let timeTarget: Double
+    
+    
 }
