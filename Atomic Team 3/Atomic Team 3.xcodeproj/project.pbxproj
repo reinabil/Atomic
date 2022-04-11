@@ -132,8 +132,8 @@
 				DCF132F027FDE3DF00B89229 /* SetGoalViewController.swift */,
 				FB5E3DC627FD925500096630 /* LatestPageViewController.swift */,
 				FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */,
-				DE0034C32803BF560074B663 /* LoadingViewController.swift */,
 				DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */,
+				DE0034C32803BF560074B663 /* LoadingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

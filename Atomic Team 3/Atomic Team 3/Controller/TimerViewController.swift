@@ -20,14 +20,18 @@ class TimerViewController: UIViewController {
     var isPlay = false
     
     var timer:Timer = Timer()
-    var count:Float = Float(UserDefaults.standard.userGoal?.timeTarget ?? 60) // TIMER VALUE IN SECONDS
+    var count:Float = 60 // TIMER VALUE IN SECONDS
     var timerCounting:Bool = false
     var countLet:Float?
+    private let navigationManager = Navigationmanager()
     
     
     override func viewDidLoad() {
         
-        print(UserDefaults.standard.userGoal?.bookTitle)
+        print(UserDefaults.standard.float(forKey: "timeTarget"))
+        print(UserDefaults.standard.integer(forKey: "totalPages"))
+        print(UserDefaults.standard.string(forKey: "bookTitle") as Any)
+    
         countLet = count
         
         // WHITE VIEW RADIUS CORNER
@@ -101,6 +105,7 @@ class TimerViewController: UIViewController {
         } else if count == 0 {
             
             // ACTION : CONGRATS
+            navigationManager.show(screen: .finish, inController: self)
             timer.invalidate()
             print("SELESAI")
             

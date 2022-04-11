@@ -28,7 +28,7 @@
         <!--Latest Page View Controller-->
         <scene sceneID="z4J-3D-GoI">
             <objects>
-                <viewController id="JnT-xI-3BM" customClass="LatestPageViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LatestPageViewController" id="JnT-xI-3BM" customClass="LatestPageViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Psr-GA-7JM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +78,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="playPressed:" destination="gPj-TI-Zxe" eventType="touchUpInside" id="9wf-p3-Xdb"/>
+                                            <action selector="updateMyProgressPressed:" destination="JnT-xI-3BM" eventType="touchUpInside" id="8cc-cU-7Xd"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Input your latest page" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wni-oW-kGD">
@@ -99,6 +100,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="cancelPressed:" destination="gPj-TI-Zxe" eventType="touchUpInside" id="KpM-O9-zIu"/>
+                                            <action selector="finishReadingGoalPressed:" destination="JnT-xI-3BM" eventType="touchUpInside" id="03x-FQ-68g"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -114,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uli-Np-iqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="1066"/>
+            <point key="canvasLocation" x="826" y="1066"/>
         </scene>
         <!--Unsetted Home View Controller-->
         <scene sceneID="roA-Ul-mdI">
@@ -640,7 +642,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Setted" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svd-RN-htT">
-                                        <rect key="frame" x="20" y="344" width="302" height="65"/>
+                                        <rect key="frame" x="20" y="296" width="302" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -660,6 +662,13 @@
                                             <segue destination="gPj-TI-Zxe" kind="showDetail" id="cfS-It-Wkt"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0s-MT-8V5">
+                                        <rect key="frame" x="156" y="353" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -669,6 +678,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="rhm-Pr-hrC"/>
                     <connections>
+                        <outlet property="booTitle" destination="s0s-MT-8V5" id="KH8-4E-abh"/>
+                        <outlet property="bookProgress" destination="Svd-RN-htT" id="n4a-fj-2aI"/>
                         <outlet property="goalEmptyCard" destination="GTW-Hq-u5L" id="VKY-bG-hbZ"/>
                         <outlet property="streakCard" destination="UYI-GM-tvD" id="T5J-fv-7bz"/>
                     </connections>

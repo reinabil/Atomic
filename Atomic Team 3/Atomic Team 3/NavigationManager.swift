@@ -14,6 +14,7 @@ class Navigationmanager {
         case mainApp
         case setGoal
         case goHome
+        case finish
     }
     
     func show(screen: Screen, inController: UIViewController) {
@@ -32,7 +33,13 @@ class Navigationmanager {
         
         case .goHome:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SettedHomeViewController")
+            
+        case .finish:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LatestPageViewController")
+            
         }
+        
+        
         
         if let sceneDelegate = inController.view.window?.windowScene?.delegate as? SceneDelegate, let
             window = sceneDelegate.window {

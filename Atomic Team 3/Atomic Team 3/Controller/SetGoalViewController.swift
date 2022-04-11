@@ -41,16 +41,21 @@ class SetGoalViewController: UIViewController {
         if Int(totalPages) ?? 0 > 0 && timeTarget >= 900 {
 
             let goal = Goal(bookTitle: bookTitle, totalPages: totalPages, timeTarget: timeTarget)
-            UserDefaults.standard.userGoal = goal
+            UserDefaults.standard.set(timeTarget, forKey: "timeTarget")
+            UserDefaults.standard.set(totalPages, forKey: "totalPages")
+            UserDefaults.standard.set(bookTitle, forKey: "bookTitle")
+         
+            
+            UserDefaults.standard.setOnboardingSeen()
+            navigationManager.show(screen: .goHome, inController: self)
             
             print("Create goal success")
         
         } else {
-            print("Total pages is less than or equal to 0 and time target must be more than 5 minutes")
+            print("Total pages is less than or equal to 0 and time target must be more than 15 minutes")
         }
         
-        UserDefaults.standard.setOnboardingSeen()
-        navigationManager.show(screen: .goHome, inController: self)
+        
        
     }
 
