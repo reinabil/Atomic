@@ -13,6 +13,7 @@ extension UserDefaults {
         case onboardingSeen
         case userGoal
         case latestPage
+        case userStreak
     }
     
     func onboardingSeen() -> Bool{
@@ -53,6 +54,25 @@ extension UserDefaults {
             } else {
                 let data = try? JSONEncoder().encode(newValue)
                 setValue(data, forKey: Key.userGoal.rawValue)
+            }
+        }
+    }
+    
+    var userStreak: Streak? {
+        get {
+            if let data = object(forKey: Key.userStreak.rawValue) as? Data {
+                let streak = try? JSONDecoder().decode(Streak.self, from: data)
+                return streak
+            }
+            return nil
+        }
+        
+        set {
+            if newValue == nil {
+                removeObject(forKey: Key.userStreak.rawValue)
+            } else {
+                let data = try? JSONEncoder().encode(newValue)
+                setValue(data, forKey: Key.userStreak.rawValue)
             }
         }
     }

@@ -159,16 +159,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86w-KG-aUP">
                                         <rect key="frame" x="24" y="100" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="main_orange"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="checkmark" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="1"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhL-jc-TaF">
                                         <rect key="frame" x="112" y="100" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="main_orange"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="3"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="3"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skt-Jh-8dY">
                                         <rect key="frame" x="156" y="100" width="36" height="36"/>
@@ -194,9 +194,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAX-zW-xtE">
                                         <rect key="frame" x="68" y="100" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="main_orange"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="checkmark" catalog="system" title=""/>
+                                        <buttonConfiguration key="configuration" style="gray" title="2"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1D-A4-4x6">
                                         <rect key="frame" x="288" y="99" width="36" height="36"/>
@@ -246,7 +246,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="7ta-Vh-ffj"/>
                     <connections>
+                        <outlet property="btnDay1" destination="86w-KG-aUP" id="2DD-HY-4vk"/>
+                        <outlet property="btnDay2" destination="oAX-zW-xtE" id="S30-2Y-18C"/>
+                        <outlet property="btnDay3" destination="MhL-jc-TaF" id="1H2-Vg-roj"/>
+                        <outlet property="btnDay4" destination="Skt-Jh-8dY" id="W59-iQ-BFg"/>
+                        <outlet property="btnDay5" destination="Jzh-mb-zi8" id="XxL-dC-PSh"/>
+                        <outlet property="btnDay6" destination="Sqc-UU-mO4" id="1Up-hX-3ps"/>
+                        <outlet property="btnDay7" destination="H1D-A4-4x6" id="MeG-ao-ooX"/>
                         <outlet property="goalEmptyCard" destination="AnL-d5-f0n" id="hou-I5-rht"/>
+                        <outlet property="labelCurrentStreak" destination="HX0-Yp-l6p" id="Uty-C0-WjQ"/>
                         <outlet property="streakCard" destination="E7n-2J-kgl" id="11R-6j-9oa"/>
                     </connections>
                 </viewController>
@@ -586,16 +594,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbZ-Bp-G7L">
                                         <rect key="frame" x="24" y="100" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="main_orange"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="checkmark" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="1"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-jC-vPK">
                                         <rect key="frame" x="112" y="100" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="main_orange"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="3"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="3"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K32-Ko-Tkg">
                                         <rect key="frame" x="156" y="100" width="36" height="36"/>
@@ -621,9 +629,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo4-zr-VOv">
                                         <rect key="frame" x="68" y="100" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="main_orange"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="checkmark" catalog="system" title=""/>
+                                        <buttonConfiguration key="configuration" style="gray" title="2"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVE-bH-eor">
                                         <rect key="frame" x="288" y="99" width="36" height="36"/>
@@ -692,7 +700,15 @@
                     <connections>
                         <outlet property="bookProgress" destination="Svd-RN-htT" id="n4a-fj-2aI"/>
                         <outlet property="bookTitle" destination="s0s-MT-8V5" id="KH8-4E-abh"/>
+                        <outlet property="btnDay1" destination="DbZ-Bp-G7L" id="3g9-7X-FHg"/>
+                        <outlet property="btnDay2" destination="qo4-zr-VOv" id="6nC-eo-OOr"/>
+                        <outlet property="btnDay3" destination="ld7-jC-vPK" id="NL0-gZ-XKk"/>
+                        <outlet property="btnDay4" destination="K32-Ko-Tkg" id="dEf-dF-kLg"/>
+                        <outlet property="btnDay5" destination="Ggx-uE-llb" id="VrL-Lz-H6C"/>
+                        <outlet property="btnDay6" destination="UfO-Z0-zUn" id="W4f-uK-NCO"/>
+                        <outlet property="btnDay7" destination="JVE-bH-eor" id="JoU-gF-9yw"/>
                         <outlet property="goalEmptyCard" destination="GTW-Hq-u5L" id="VKY-bG-hbZ"/>
+                        <outlet property="labelCurrentStreak" destination="UFx-Rw-oUP" id="BiK-0r-3OL"/>
                         <outlet property="streakCard" destination="UYI-GM-tvD" id="T5J-fv-7bz"/>
                     </connections>
                 </viewController>
@@ -721,7 +737,6 @@
     </scenes>
     <resources>
         <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="empty_goal" width="258" height="263"/>
