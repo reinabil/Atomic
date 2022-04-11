@@ -27,7 +27,7 @@ class LoadingViewController: UIViewController {
             navigationManager.show(screen: .mainApp, inController: self)
         } else {
             // go to onboarding
-            navigationManager.show(screen: .onboarding, inController: self)
+            navigationManager.show(screen: .firstTime, inController: self)
         }
     }
 }

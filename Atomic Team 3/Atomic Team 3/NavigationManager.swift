@@ -10,8 +10,10 @@ import UIKit
 
 class Navigationmanager {
     enum Screen {
-        case onboarding
+        case firstTime
         case mainApp
+        case setGoal
+        case goHome
     }
     
     func show(screen: Screen, inController: UIViewController) {
@@ -19,10 +21,17 @@ class Navigationmanager {
         var viewController: UIViewController!
         
         switch screen {
-        case .onboarding:
-            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "OnboardViewController")
-        case .mainApp:
+        case .firstTime:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "UnsettedHomeViewController")
+            
+        case .mainApp:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SettedHomeViewController")
+            
+        case .setGoal:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SetGoalViewController")
+        
+        case .goHome:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SettedHomeViewController")
         }
         
         if let sceneDelegate = inController.view.window?.windowScene?.delegate as? SceneDelegate, let

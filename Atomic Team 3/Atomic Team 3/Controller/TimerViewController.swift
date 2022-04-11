@@ -20,13 +20,14 @@ class TimerViewController: UIViewController {
     var isPlay = false
     
     var timer:Timer = Timer()
-    var count:Float = 60 // TIMER VALUE IN SECONDS
+    var count:Float = Float(UserDefaults.standard.userGoal?.timeTarget ?? 60) // TIMER VALUE IN SECONDS
     var timerCounting:Bool = false
     var countLet:Float?
     
     
     override func viewDidLoad() {
         
+        print(UserDefaults.standard.userGoal?.bookTitle)
         countLet = count
         
         // WHITE VIEW RADIUS CORNER
@@ -80,6 +81,9 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func cancelPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func timerCounter() -> Void

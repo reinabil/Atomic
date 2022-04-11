@@ -14,6 +14,8 @@ class SetGoalViewController: UIViewController {
     @IBOutlet weak var totalPagesTextField: UITextField!
     @IBOutlet weak var readingTimeTargetPicker: UIDatePicker!
     
+    private var navigationManager = Navigationmanager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -46,6 +48,10 @@ class SetGoalViewController: UIViewController {
         } else {
             print("Total pages is less than or equal to 0 and time target must be more than 5 minutes")
         }
+        
+        UserDefaults.standard.setOnboardingSeen()
+        navigationManager.show(screen: .goHome, inController: self)
+       
     }
 
     override func viewWillAppear(_ animated: Bool) {

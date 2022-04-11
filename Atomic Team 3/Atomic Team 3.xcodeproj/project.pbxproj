@@ -13,7 +13,7 @@
 		DCF132F127FDE3DF00B89229 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF132F027FDE3DF00B89229 /* SetGoalViewController.swift */; };
 		DE0034C42803BF560074B663 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0034C32803BF560074B663 /* LoadingViewController.swift */; };
 		DE0034C82803C4AD0074B663 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0034C72803C4AD0074B663 /* NavigationManager.swift */; };
-		DE0034CA2803C73B0074B663 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0034C92803C73B0074B663 /* StorageManager.swift */; };
+		DE0034CA2803C73B0074B663 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0034C92803C73B0074B663 /* UserDefault.swift */; };
 		DE12F08427FBEFDF003A0FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F08327FBEFDF003A0FB0 /* AppDelegate.swift */; };
 		DE12F08627FBEFDF003A0FB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F08527FBEFDF003A0FB0 /* SceneDelegate.swift */; };
 		DE12F08827FBEFDF003A0FB0 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12F08727FBEFDF003A0FB0 /* OnboardViewController.swift */; };
@@ -21,6 +21,7 @@
 		DE12F08D27FBEFE1003A0FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE12F08C27FBEFE1003A0FB0 /* Assets.xcassets */; };
 		DE12F09027FBEFE1003A0FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12F08E27FBEFE1003A0FB0 /* LaunchScreen.storyboard */; };
 		DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE80133E27FD34D200901385 /* TimerViewController.swift */; };
+		DE8F56CE2803F9DD00C63C12 /* SettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */; };
 		DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351EC27FC482D00A5E0B5 /* Onboard.swift */; };
 		DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */; };
 		FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */; };
@@ -34,7 +35,7 @@
 		DCF132F027FDE3DF00B89229 /* SetGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		DE0034C32803BF560074B663 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		DE0034C72803C4AD0074B663 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
-		DE0034C92803C73B0074B663 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		DE0034C92803C73B0074B663 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		DE12F08027FBEFDF003A0FB0 /* Atomic Team 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atomic Team 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE12F08327FBEFDF003A0FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE12F08527FBEFDF003A0FB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		DE12F08F27FBEFE1003A0FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE12F09127FBEFE1003A0FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE80133E27FD34D200901385 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettedHomeViewController.swift; sourceTree = "<group>"; };
 		DEB351EC27FC482D00A5E0B5 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBrain.swift; sourceTree = "<group>"; };
 		FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsettedHomeViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0034C72803C4AD0074B663 /* NavigationManager.swift */,
-				DE0034C92803C73B0074B663 /* StorageManager.swift */,
+				DE0034C92803C73B0074B663 /* UserDefault.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -131,6 +133,7 @@
 				FB5E3DC627FD925500096630 /* LatestPageViewController.swift */,
 				FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */,
 				DE0034C32803BF560074B663 /* LoadingViewController.swift */,
+				DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,8 +222,9 @@
 				DCF132F127FDE3DF00B89229 /* SetGoalViewController.swift in Sources */,
 				DCF132EF27FDE3D100B89229 /* EditGoalViewController.swift in Sources */,
 				DE0034C82803C4AD0074B663 /* NavigationManager.swift in Sources */,
+				DE8F56CE2803F9DD00C63C12 /* SettedHomeViewController.swift in Sources */,
 				DE0034C42803BF560074B663 /* LoadingViewController.swift in Sources */,
-				DE0034CA2803C73B0074B663 /* StorageManager.swift in Sources */,
+				DE0034CA2803C73B0074B663 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
