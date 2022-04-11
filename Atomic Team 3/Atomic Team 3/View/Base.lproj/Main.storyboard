@@ -495,6 +495,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="main_orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createGoalButtonPressed:" destination="sbI-vi-hJh" eventType="touchUpInside" id="dLl-19-s8S"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Input book's title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-tk-cqJ" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="154" width="390" height="44"/>
@@ -525,6 +528,7 @@
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bookTitleTextField" destination="dyP-tk-cqJ" id="UGN-jX-Hfm"/>
+                        <outlet property="readingTimeTargetPicker" destination="PT5-iW-3iC" id="aeH-rG-1qZ"/>
                         <outlet property="totalPagesTextField" destination="e0S-ET-6JH" id="Jj3-T3-FdP"/>
                     </connections>
                 </viewController>
@@ -559,9 +563,10 @@
                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Atomic Book" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-zm-jUP" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Atomic Book" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-zm-jUP" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="154" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -572,9 +577,10 @@
                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="538" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Btw-jH-XH3" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="538" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Btw-jH-XH3" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="256" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -597,6 +603,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="main_orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="Isb-iL-QHp" eventType="touchUpInside" id="lF7-kq-W7V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFa-e2-mOs">
                                 <rect key="frame" x="20" y="633" width="350" height="50"/>
@@ -607,6 +616,9 @@
                                     <color key="baseForegroundColor" name="main_orange"/>
                                     <color key="baseBackgroundColor" name="secondary_orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="Isb-iL-QHp" eventType="touchUpInside" id="ZkH-sA-TJf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7zq-CD-PXE"/>
@@ -614,7 +626,8 @@
                     </view>
                     <connections>
                         <outlet property="bookTitleTextField" destination="vyz-zm-jUP" id="8Kz-CW-8hP"/>
-                        <outlet property="totalPageTextField" destination="Btw-jH-XH3" id="HR6-QE-BtS"/>
+                        <outlet property="readingTimeTargetPicker" destination="wiL-6U-ya1" id="tkA-Qe-tyu"/>
+                        <outlet property="totalPagesTextField" destination="Btw-jH-XH3" id="HR6-QE-BtS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbe-UH-UoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
