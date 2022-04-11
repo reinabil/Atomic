@@ -17,9 +17,12 @@ class OnboardViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var getStartedButton: UIButton!
     
+    
     var contents = OnboardBrain().contents
     var page = 0;
     var getStartedHidden = true
+    private let storageManager = StorageManager()
+    private let navigationManager = Navigationmanager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,11 @@ class OnboardViewController: UIViewController {
             onboardButton2.isHidden = true
         }
 
+        updateFlag()
+    }
+    
+    func updateFlag() {
+        storageManager.setOnboardingSeen()
     }
     
     @IBAction func onboardButton1Pressed(_ sender: UIButton) {
@@ -67,6 +75,11 @@ class OnboardViewController: UIViewController {
     @IBAction func onboardButton2Pressed(_ sender: UIButton) {
     }
     @IBAction func getStartedPressed(_ sender: UIButton) {
+        showMainApp()
+    }
+    
+    
+    private func showMainApp(){
+        navigationManager.show(screen: .mainApp, inController: self)
     }
 }
-
