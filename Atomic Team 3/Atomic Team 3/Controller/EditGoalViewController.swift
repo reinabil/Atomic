@@ -71,6 +71,7 @@ class EditGoalViewController: UIViewController {
     func deleteGoal() {
         // delete the goal & redirected to home
         UserDefaults.standard.userGoal = nil
+        UserDefaults.standard.latestPage = nil
         navigationManager.show(screen: .firstTime, inController: self)
     }
 }

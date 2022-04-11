@@ -15,6 +15,7 @@ class LatestPageViewController: UIViewController {
     
     override func viewDidLoad() {
         whiteCard.layer.cornerRadius = 10
+        self.dismissKeyboard()
     }
     @IBAction func updateMyProgressPressed(_ sender: UIButton) {
         UserDefaults.standard.latestPage = Float(latestPage.text ?? "0")

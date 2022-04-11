@@ -18,6 +18,7 @@ class SetGoalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dismissKeyboard()
     }
     
     // set error untuk text field
@@ -64,5 +65,18 @@ class SetGoalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         bookTitleTextField.borderStyle = UITextField.BorderStyle.roundedRect
         totalPagesTextField.borderStyle = UITextField.BorderStyle.roundedRect
+    }
+}
+
+//MARK: - UITextFieldDelegate
+extension UIViewController {
+func dismissKeyboard() {
+       let tap: UITapGestureRecognizer = UITapGestureRecognizer( target:     self, action:    #selector(UIViewController.dismissKeyboardTouchOutside))
+       tap.cancelsTouchesInView = false
+       view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboardTouchOutside() {
+       view.endEditing(true)
     }
 }
