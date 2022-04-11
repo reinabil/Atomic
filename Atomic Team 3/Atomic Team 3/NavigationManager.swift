@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Navigationmanager {
+class NavigationManager {
     enum Screen {
         case firstTime
         case mainApp

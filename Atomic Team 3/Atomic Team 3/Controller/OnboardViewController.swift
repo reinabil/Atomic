@@ -21,7 +21,7 @@ class OnboardViewController: UIViewController {
     var contents = OnboardBrain().contents
     var page = 0;
     var getStartedHidden = true
-    private let navigationManager = Navigationmanager()
+    private let navigationManager = NavigationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()

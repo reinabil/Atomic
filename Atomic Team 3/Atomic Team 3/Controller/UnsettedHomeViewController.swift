@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class UnsettedHomeViewController: UIViewController{
-    private var navigationManager = Navigationmanager()
+    private var navigationManager = NavigationManager()
     
     @IBOutlet weak var streakCard: UIView!
     @IBOutlet weak var goalEmptyCard: UIView!

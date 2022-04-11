@@ -13,6 +13,7 @@ class EditGoalViewController: UIViewController {
     @IBOutlet weak var bookTitleTextField: UITextField!
     @IBOutlet weak var totalPagesTextField: UITextField!
     @IBOutlet weak var readingTimeTargetPicker: UIDatePicker!
+    var navigationManager = NavigationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,10 @@ class EditGoalViewController: UIViewController {
             
             UserDefaults.standard.userGoal = updatedGoal
         }
+        
+        navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
@@ -65,5 +70,7 @@ class EditGoalViewController: UIViewController {
     
     func deleteGoal() {
         // delete the goal & redirected to home
+        UserDefaults.standard.userGoal = nil
+        navigationManager.show(screen: .firstTime, inController: self)
     }
 }

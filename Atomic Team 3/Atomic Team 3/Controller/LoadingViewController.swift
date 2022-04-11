@@ -10,14 +10,18 @@ import UIKit
 class LoadingViewController: UIViewController {
     private var isOnboardingSeen: Bool!
     
-    private let navigationManager = Navigationmanager()
+    private let navigationManager = NavigationManager()
     override func viewDidLoad() {
         isOnboardingSeen = UserDefaults.standard.onboardingSeen()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showInitialScreen()
+        if UserDefaults.standard.userGoal != nil {
+            showInitialScreen()
+        } else {
+            navigationManager.show(screen: .firstTime, inController: self)
+        }
     }
     
     

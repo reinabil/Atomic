@@ -14,7 +14,7 @@ class SetGoalViewController: UIViewController {
     @IBOutlet weak var totalPagesTextField: UITextField!
     @IBOutlet weak var readingTimeTargetPicker: UIDatePicker!
     
-    private var navigationManager = Navigationmanager()
+    private var navigationManager = NavigationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +41,11 @@ class SetGoalViewController: UIViewController {
         if Int(totalPages) ?? 0 > 0 && timeTarget >= 900 {
 
             let goal = Goal(bookTitle: bookTitle, totalPages: totalPages, timeTarget: timeTarget)
-            UserDefaults.standard.set(timeTarget, forKey: "timeTarget")
-            UserDefaults.standard.set(totalPages, forKey: "totalPages")
-            UserDefaults.standard.set(bookTitle, forKey: "bookTitle")
+            UserDefaults.standard.userGoal = goal
+            
+//            UserDefaults.standard.set(timeTarget, forKey: "timeTarget")
+//            UserDefaults.standard.set(totalPages, forKey: "totalPages")
+//            UserDefaults.standard.set(bookTitle, forKey: "bookTitle")
          
             
             UserDefaults.standard.setOnboardingSeen()

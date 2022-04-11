@@ -12,6 +12,7 @@ extension UserDefaults {
     enum Key: String {
         case onboardingSeen
         case userGoal
+        case latestPage
     }
     
     func onboardingSeen() -> Bool{
@@ -24,6 +25,17 @@ extension UserDefaults {
     
     func resetOnboardingSeen() {
         UserDefaults.standard.set(false, forKey: Key.onboardingSeen.rawValue)
+    }
+    
+    
+    
+    var latestPage: Float? {
+        get {
+            float(forKey: Key.latestPage.rawValue)
+        }
+        set {
+            setValue(newValue, forKey: Key.latestPage.rawValue)
+        }
     }
     
     var userGoal: Goal? {
