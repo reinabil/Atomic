@@ -11,22 +11,35 @@ import UIKit
 class EditGoalViewController: UIViewController {
     
     @IBOutlet weak var bookTitleTextField: UITextField!
-    @IBOutlet weak var totalPageTextField: UITextField!
+    @IBOutlet weak var totalPagesTextField: UITextField!
     @IBOutlet weak var readingTimeTargetPicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bookTitleTextField.text = UserDefaults.standard.userGoal?.bookTitle
+        totalPagesTextField.text = UserDefaults.standard.userGoal?.totalPages
+        readingTimeTargetPicker.countDownDuration = UserDefaults.standard.userGoal?.timeTarget ?? 60
     }
     
     override func viewWillAppear(_ animated: Bool) {
         bookTitleTextField.borderStyle = UITextField.BorderStyle.roundedRect
-        totalPageTextField.borderStyle = UITextField.BorderStyle.roundedRect
+        totalPagesTextField.borderStyle = UITextField.BorderStyle.roundedRect
     }
     
     
     @IBAction func updateButtonPressed(_ sender: Any) {
-//        print(readingTimeTargetPicker.countDownDuration)
+        
+        let bookTitle = bookTitleTextField.text ?? "Atomic Book"
+        let totalPages = totalPagesTextField.text ?? "538"
+        let updatedTimeTarget = readingTimeTargetPicker.countDownDuration
+        
+        if updatedTimeTarget >= 900 {
+            
+            let updatedGoal = Goal(bookTitle: bookTitle, totalPages: totalPages, timeTarget: updatedTimeTarget)
+            
+            UserDefaults.standard.userGoal = updatedGoal
+        }
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
@@ -40,7 +53,7 @@ class EditGoalViewController: UIViewController {
         // Yes, delete button action handler
         let confirmDeleteButton = UIAlertAction(title: "Yes, delete", style: .destructive, handler: {
             action in
-            // delete goal func
+            self.deleteGoal()
         })
         
         alertDialog.addAction(backButton)
@@ -48,5 +61,9 @@ class EditGoalViewController: UIViewController {
         
         // present alert dialog
         self.present(alertDialog, animated: true, completion: nil)
+    }
+    
+    func deleteGoal() {
+        // delete the goal & redirected to home
     }
 }

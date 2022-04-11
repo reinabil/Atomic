@@ -14,41 +14,40 @@ class SetGoalViewController: UIViewController {
     @IBOutlet weak var totalPagesTextField: UITextField!
     @IBOutlet weak var readingTimeTargetPicker: UIDatePicker!
     
-    let userDefault = UserDefaults.standard
-    var bookTitle:String = ""
-    var totalPages:Int = 0
-    var readingTimeTarget = 0.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // set error untuk text field
+    @IBAction func createGoalButtonPressed(_ sender: Any) {
         
-//        bookTitle = bookTitleTextField.text
-//        totalPages = Int(totalPagesTextField.text)
+        // check if bookTitle is empty
+        guard let bookTitle = bookTitleTextField.text, bookTitleTextField.text?.isEmpty == false else {
+            print("Book title is empty")
+            return
+        }
+
+        // check if totalPages is empty
+        guard let totalPages = totalPagesTextField.text, totalPagesTextField.text?.isEmpty == false else {
+            print("Total pages is empty")
+            return
+        }
         
-        if validateBookTitle() && validateTotalPages() {
+        let timeTarget = readingTimeTargetPicker.countDownDuration
+        
+        // validate if totalPages have value more than 0 && time target is more than 15 minutes
+        if Int(totalPages) ?? 0 > 0 && timeTarget >= 900 {
+
+            let goal = Goal(bookTitle: bookTitle, totalPages: totalPages, timeTarget: timeTarget)
+            UserDefaults.standard.userGoal = goal
             
+            print("Create goal success")
+        
+        } else {
+            print("Total pages is less than or equal to 0 and time target must be more than 5 minutes")
         }
-        
-        userDefault.set(bookTitle, forKey: "bookTitle")
-        userDefault.set(totalPages, forKey: "totalPages")
     }
-    
-    func validateBookTitle() -> Bool {
-        if bookTitle.isEmpty {
-            return false
-        }
-        
-        return true
-    }
-    
-    func validateTotalPages() -> Bool {
-//        if totalPages is Int || totalPages <= 0{
-//            return false
-//        }
-        
-        return true
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         bookTitleTextField.borderStyle = UITextField.BorderStyle.roundedRect
         totalPagesTextField.borderStyle = UITextField.BorderStyle.roundedRect

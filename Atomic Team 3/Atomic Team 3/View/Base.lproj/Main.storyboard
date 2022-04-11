@@ -488,6 +488,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                     <color key="baseBackgroundColor" name="main_orange"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createGoalButtonPressed:" destination="sbI-vi-hJh" eventType="touchUpInside" id="dLl-19-s8S"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Input book's title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-tk-cqJ" customClass="TextField" customModule="Atomic_Team_3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="154" width="390" height="44"/>
@@ -514,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCR-YN-3YR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="1499"/>
+            <point key="canvasLocation" x="16.923076923076923" y="1498.5781990521327"/>
         </scene>
         <!--Edit Goal View Controller-->
         <scene sceneID="hLr-3S-iDc">
@@ -607,7 +610,7 @@
                     <connections>
                         <outlet property="bookTitleTextField" destination="vyz-zm-jUP" id="8Kz-CW-8hP"/>
                         <outlet property="readingTimeTargetPicker" destination="wiL-6U-ya1" id="tkA-Qe-tyu"/>
-                        <outlet property="totalPageTextField" destination="Btw-jH-XH3" id="HR6-QE-BtS"/>
+                        <outlet property="totalPagesTextField" destination="Btw-jH-XH3" id="HR6-QE-BtS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbe-UH-UoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
