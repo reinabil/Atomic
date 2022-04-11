@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RPp-pl-ibA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ugx-Bt-x4L">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -10,10 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="Waj-Pp-wln">
+            <objects>
+                <viewController id="ugx-Bt-x4L" customClass="LoadingViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7it-Kk-52Y">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e1k-R6-lXz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWH-aN-xGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-757" y="65"/>
+        </scene>
         <!--Onboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardViewController" id="BYZ-38-t0r" customClass="OnboardViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,12 +207,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uli-Np-iqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.61538461538453" y="64.691943127962077"/>
+            <point key="canvasLocation" x="920" y="827"/>
         </scene>
         <!--Unsetted Home View Controller-->
         <scene sceneID="roA-Ul-mdI">
             <objects>
-                <viewController id="RPp-pl-ibA" customClass="UnsettedHomeViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UnsettedHomeViewController" id="RPp-pl-ibA" customClass="UnsettedHomeViewController" customModule="Atomic_Team_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IV3-2X-APA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,6 +323,9 @@
                                             <color key="baseForegroundColor" name="secondary_orange"/>
                                             <color key="baseBackgroundColor" name="main_orange"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="sbI-vi-hJh" kind="show" id="UaH-g8-ijS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -316,6 +334,7 @@
                         <viewLayoutGuide key="safeArea" id="Pic-ip-jTV"/>
                         <color key="backgroundColor" name="grey_bg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7ta-Vh-ffj"/>
                     <connections>
                         <outlet property="goalEmptyCard" destination="AnL-d5-f0n" id="hou-I5-rht"/>
                         <outlet property="streakCard" destination="E7n-2J-kgl" id="11R-6j-9oa"/>
@@ -323,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0M-ai-juQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.6153846153845" y="64.691943127962077"/>
+            <point key="canvasLocation" x="1944.6153846153845" y="65.402843601895725"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="Bf4-R9-10v">
@@ -433,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfz-nb-bOP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.923076923076923" y="768.48341232227483"/>
+            <point key="canvasLocation" x="80" y="827"/>
         </scene>
         <!--Set Goal View Controller-->
         <scene sceneID="6Bk-3A-xZd">
@@ -443,18 +462,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOc-tG-1ux">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Set New Goal" id="I7s-qE-CmT">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="o4e-hL-G08">
-                                            <color key="tintColor" name="main_orange"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BOOK TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1d-fK-J2n">
                                 <rect key="frame" x="20" y="124" width="76" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -501,11 +508,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7d-fp-eUI">
+                                <rect key="frame" x="16" y="52" width="87" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6F4-eg-LHB"/>
                         <color key="backgroundColor" name="grey_bg"/>
                     </view>
                     <navigationItem key="navigationItem" id="7NI-4r-3kl"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bookTitleTextField" destination="dyP-tk-cqJ" id="UGN-jX-Hfm"/>
                         <outlet property="totalPagesTextField" destination="e0S-ET-6JH" id="Jj3-T3-FdP"/>
@@ -513,7 +530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCR-YN-3YR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="1499"/>
+            <point key="canvasLocation" x="2793.8461538461538" y="64.691943127962077"/>
         </scene>
         <!--Edit Goal View Controller-->
         <scene sceneID="hLr-3S-iDc">
@@ -604,21 +621,38 @@
             </objects>
             <point key="canvasLocation" x="971" y="1499"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kQW-xZ-2Fb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ntk-3z-50a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S1B-ep-yyW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p4E-uA-V6f">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RPp-pl-ibA" kind="relationship" relationship="rootViewController" id="4aV-CT-uWL"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1013.8461538461538" y="64.691943127962077"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="empty_goal" width="258" height="263"/>
         <image name="little_step" width="302" height="281"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="onboard_1" width="116.66666412353516" height="128.33332824707031"/>
         <image name="pause" catalog="system" width="88" height="128"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="streak_emoji" width="52" height="52"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="streak_emoji" width="52" height="52"/>
         <image name="timer" width="85" height="84"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
