@@ -25,6 +25,8 @@
 		DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351EC27FC482D00A5E0B5 /* Onboard.swift */; };
 		DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */; };
 		DECEFF2828051CE900F1979D /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DECEFF2728051CE900F1979D /* finish.mp3 */; };
+		DECEFF2A2805246B00F1979D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECEFF292805246B00F1979D /* ProgressBar.swift */; };
+		DECEFF2C280525EC00F1979D /* AppTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECEFF2B280525EC00F1979D /* AppTimer.swift */; };
 		F19A94D82804C8FE0053F04A /* HomeSettedGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */; };
 		FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */; };
 		FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E3DC627FD925500096630 /* LatestPageViewController.swift */; };
@@ -53,6 +55,8 @@
 		DEB351EC27FC482D00A5E0B5 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBrain.swift; sourceTree = "<group>"; };
 		DECEFF2728051CE900F1979D /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = finish.mp3; path = Controller/finish.mp3; sourceTree = "<group>"; };
+		DECEFF292805246B00F1979D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		DECEFF2B280525EC00F1979D /* AppTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTimer.swift; sourceTree = "<group>"; };
 		F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettedGoals.swift; sourceTree = "<group>"; };
 		FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsettedHomeViewController.swift; sourceTree = "<group>"; };
 		FB5E3DC627FD925500096630 /* LatestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPageViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */,
 				DC849F272803C25600B0D524 /* Goal.swift */,
 				FB93090B2804E72700BFEA49 /* Streak.swift */,
+				DECEFF292805246B00F1979D /* ProgressBar.swift */,
+				DECEFF2B280525EC00F1979D /* AppTimer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,8 +233,10 @@
 				FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */,
 				DE12F08427FBEFDF003A0FB0 /* AppDelegate.swift in Sources */,
 				FB93090C2804E72700BFEA49 /* Streak.swift in Sources */,
+				DECEFF2A2805246B00F1979D /* ProgressBar.swift in Sources */,
 				DCF132ED27FDE3A000B89229 /* TextField.swift in Sources */,
 				DE12F08627FBEFDF003A0FB0 /* SceneDelegate.swift in Sources */,
+				DECEFF2C280525EC00F1979D /* AppTimer.swift in Sources */,
 				FB93090E2804E7EA00BFEA49 /* UIButtonExt.swift in Sources */,
 				DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */,
 				FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */,

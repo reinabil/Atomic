@@ -82,9 +82,30 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func cancelPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-
-        dismiss(animated: true, completion: nil)
+        self.timer.invalidate()
+        // init alert dialog for delete confirmation
+        let alertDialog = UIAlertController(title: "Cancel the timer?", message: "Your recorded time will be cancelled", preferredStyle: .alert)
+        
+        // Back button action handler
+        let backButton = UIAlertAction(title: "Back", style: .cancel, handler: {_ in
+            self.playPressed(self.playButton)
+        })
+        
+        // Yes, delete button action handler
+        let confirmDeleteButton = UIAlertAction(title: "Yes, cancel", style: .destructive, handler: {
+            action in
+            
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+        })
+        
+        alertDialog.addAction(backButton)
+        alertDialog.addAction(confirmDeleteButton)
+        
+        // present alert dialog
+        self.present(alertDialog, animated: true, completion: nil)
+        
+        
     }
     
     @objc func timerCounter() -> Void
@@ -123,6 +144,13 @@ class TimerViewController: UIViewController {
             timeString += String(format: "%02d", seconds)
             return timeString
         }
+    
+    func deleteGoal() {
+        // delete the goal & redirected to home
+        UserDefaults.standard.userGoal = nil
+        UserDefaults.standard.latestPage = nil
+        navigationManager.show(screen: .firstTime, inController: self)
+    }
     
  }
 

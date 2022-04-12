@@ -9,13 +9,17 @@ import Foundation
 import UIKit
 
 class SettedHomeViewController: UIViewController{
+    
+    @IBOutlet weak var progressBar1: ProgressBar!
     @IBOutlet weak var bookProgress: UILabel!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var streakCard: UIView!
     @IBOutlet weak var goalEmptyCard: UIView!
+    @IBOutlet weak var pagesProgress: UILabel!
     var totalPages: Float?
     var latestPage: Float?
     var userProgress: Float?
+    private let navigationManager = NavigationManager()
     
     @IBOutlet weak var labelCurrentStreak: UILabel!
     @IBOutlet weak var btnDay1: UIButton!
@@ -26,7 +30,11 @@ class SettedHomeViewController: UIViewController{
     @IBOutlet weak var btnDay6: UIButton!
     @IBOutlet weak var btnDay7: UIButton!
     
+    var countFired: CGFloat = 0
+    
     override func viewDidLoad() {
+        
+        
         
 //        print(UserDefaults.standard.float(forKey: "timeTarget"))
 //        print(UserDefaults.standard.integer(forKey: "totalPages"))
@@ -34,6 +42,7 @@ class SettedHomeViewController: UIViewController{
         
         if UserDefaults.standard.userGoal != nil {
             totalPages = Float(UserDefaults.standard.userGoal!.totalPages)
+            pagesProgress.text = "\(Int(UserDefaults.standard.latestPage!))/\(Int(UserDefaults.standard.userGoal!.totalPages)!) pages"
         } else {
             totalPages = 0
         }
@@ -45,6 +54,7 @@ class SettedHomeViewController: UIViewController{
         bookProgress.text = String(format: "%.0f", userProgress!) + "%"
         bookTitle.text = UserDefaults.standard.userGoal?.bookTitle
         
+        progressBar1.progress = CGFloat((latestPage! ?? 0) / (totalPages! ?? 0))
         
         streakCard.layer.cornerRadius = 10
         goalEmptyCard.layer.cornerRadius = 10
@@ -129,5 +139,41 @@ class SettedHomeViewController: UIViewController{
         default:
             print("nothing...")
         }
+    }
+    
+    private func showCase() {
+      Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+        self.countFired += 1
+        
+        DispatchQueue.main.async {
+          self.progressBar1.progress = min(CGFloat(0.04 * self.countFired), 1)
+        }
+      }
+    }
+    @IBAction func completePressed(_ sender: UIButton) {
+        // init alert dialog for delete confirmation
+        let alertDialog = UIAlertController(title: "Complete your goal?", message: "Once you complete, your progress so far will be set as accomplished", preferredStyle: .alert)
+        
+        // Back button action handler
+        let backButton = UIAlertAction(title: "Back", style: .cancel, handler: nil)
+        
+        // Yes, delete button action handler
+        let confirmDeleteButton = UIAlertAction(title: "Complete", style: .default, handler: {
+            action in
+            self.deleteGoal()
+        })
+        
+        alertDialog.addAction(backButton)
+        alertDialog.addAction(confirmDeleteButton)
+        
+        // present alert dialog
+        self.present(alertDialog, animated: true, completion: nil)
+    }
+    
+    func deleteGoal() {
+        // delete the goal & redirected to home
+        UserDefaults.standard.userGoal = nil
+        UserDefaults.standard.latestPage = nil
+        navigationManager.show(screen: .firstTime, inController: self)
     }
 }

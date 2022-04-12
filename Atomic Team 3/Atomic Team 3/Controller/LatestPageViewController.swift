@@ -61,9 +61,30 @@ class LatestPageViewController: UIViewController {
     }
     
     @IBAction func finishReadingGoalPressed(_ sender: UIButton) {
-        UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
-        print(UserDefaults.standard.latestPage)
-        navigationManager.show(screen: .goHome, inController: self)
+        
+        
+            // init alert dialog for delete confirmation
+            let alertDialog = UIAlertController(title: "Complete your goal?", message: "Once you complete, your progress so far will be set as accomplished", preferredStyle: .alert)
+            
+            // Back button action handler
+            let backButton = UIAlertAction(title: "Back", style: .cancel, handler: nil)
+            
+            // Yes, delete button action handler
+            let confirmDeleteButton = UIAlertAction(title: "Complete", style: .default, handler: {
+                action in
+                UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
+                print(UserDefaults.standard.latestPage)
+                self.navigationManager.show(screen: .goHome, inController: self)
+            })
+            
+            alertDialog.addAction(backButton)
+            alertDialog.addAction(confirmDeleteButton)
+            
+            // present alert dialog
+            self.present(alertDialog, animated: true, completion: nil)
+        
+        
+        
     }
     
     private func reset() {
@@ -90,6 +111,13 @@ class LatestPageViewController: UIViewController {
         } else {
             reset()
         }
+    }
+    
+    func deleteGoal() {
+        // delete the goal & redirected to home
+        UserDefaults.standard.userGoal = nil
+        UserDefaults.standard.latestPage = nil
+        navigationManager.show(screen: .firstTime, inController: self)
     }
     
 }
