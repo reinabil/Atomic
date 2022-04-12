@@ -20,7 +20,7 @@ class TimerViewController: UIViewController {
     var isPlay = false
     
     var timer:Timer = Timer()
-    var count:Float =  10// TIMER VALUE IN SECONDS
+    var count:Float =  Float(UserDefaults.standard.userGoal?.timeTarget ?? 60)// TIMER VALUE IN SECONDS
     // Float(UserDefaults.standard.userGoal?.timeTarget ?? 60)
     var timerCounting:Bool = false
     var countLet:Float?
