@@ -49,42 +49,58 @@ class LatestPageViewController: UIViewController {
         
         count = UserDefaults.standard.userStreak?.count ?? 1
         lastDate = UserDefaults.standard.userStreak?.lastDate ?? today
-        
     }
     
     @IBAction func updateMyProgressPressed(_ sender: UIButton) {
-        UserDefaults.standard.latestPage = Float(latestPage.text ?? "0")
-        print(UserDefaults.standard.latestPage)
+        
+        let latestPage = latestPage.text ?? ""
+        
+        // check if latest pages is empty
+        if latestPage.isEmpty == true {
+            showToast(message: "Latest pages must be filled")
+            return
+        }
+        
+        // check if latest pages is numeric
+        if Int(latestPage) == nil {
+            showToast(message: "Latest pages must be numeric")
+            return
+        }
+        
+        // check if latest pages is greater than 0
+        if Int(latestPage) ?? 0 <= 0 {
+            showToast(message: "Latest pages must be greater than 0")
+            return
+        }
+        
+        UserDefaults.standard.latestPage = Float(latestPage)
         updateStreak()
+        print("Update progress success")
         
         navigationManager.show(screen: .goHome, inController: self)
     }
     
     @IBAction func finishReadingGoalPressed(_ sender: UIButton) {
         
+        // init alert dialog for delete confirmation
+        let alertDialog = UIAlertController(title: "Complete your goal?", message: "Once you complete, your progress so far will be set as accomplished", preferredStyle: .alert)
         
-            // init alert dialog for delete confirmation
-            let alertDialog = UIAlertController(title: "Complete your goal?", message: "Once you complete, your progress so far will be set as accomplished", preferredStyle: .alert)
-            
-            // Back button action handler
-            let backButton = UIAlertAction(title: "Back", style: .cancel, handler: nil)
-            
-            // Yes, delete button action handler
-            let confirmDeleteButton = UIAlertAction(title: "Complete", style: .default, handler: {
-                action in
-                UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
-                print(UserDefaults.standard.latestPage)
-                self.navigationManager.show(screen: .goHome, inController: self)
-            })
-            
-            alertDialog.addAction(backButton)
-            alertDialog.addAction(confirmDeleteButton)
-            
-            // present alert dialog
-            self.present(alertDialog, animated: true, completion: nil)
+        // Back button action handler
+        let backButton = UIAlertAction(title: "Back", style: .cancel, handler: nil)
         
+        // Complete button action handler
+        let confirmDeleteButton = UIAlertAction(title: "Complete", style: .default, handler: {
+            action in
+            UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
+            print(UserDefaults.standard.latestPage)
+            self.navigationManager.show(screen: .goHome, inController: self)
+        })
+            
+        alertDialog.addAction(backButton)
+        alertDialog.addAction(confirmDeleteButton)
         
-        
+        // present alert dialog
+        self.present(alertDialog, animated: true, completion: nil)
     }
     
     private func reset() {
@@ -120,4 +136,29 @@ class LatestPageViewController: UIViewController {
         navigationManager.show(screen: .firstTime, inController: self)
     }
     
+    func showToast(message: String){
+            
+        let toastMsg = UILabel()
+        toastMsg.text = message
+        toastMsg.textAlignment = .center;
+        toastMsg.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastMsg.textColor = UIColor.white
+        toastMsg.numberOfLines = 0
+        toastMsg.font = UIFont.systemFont(ofSize: 15)
+        
+        let textSize = toastMsg.intrinsicContentSize
+        let toastWidth = min(textSize.width, self.view.frame.size.height-150)
+        
+        toastMsg.frame = CGRect(x: self.view.frame.size.width/2-(textSize.width/2)-25, y: self.view.frame.size.height-150, width: toastWidth + 50, height: textSize.height + 10)
+        toastMsg.alpha = 1.0
+        toastMsg.layer.cornerRadius = 10;
+        toastMsg.clipsToBounds = true
+        self.view.addSubview(toastMsg)
+            
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastMsg.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastMsg.removeFromSuperview()
+        })
+    }
 }

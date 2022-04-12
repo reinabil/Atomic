@@ -24,7 +24,6 @@ class LoadingViewController: UIViewController {
         }
     }
     
-    
     func showInitialScreen() {
         if isOnboardingSeen {
             // go to home page

@@ -24,47 +24,84 @@ class SetGoalViewController: UIViewController {
     // set error untuk text field
     @IBAction func createGoalButtonPressed(_ sender: Any) {
         
-        // check if bookTitle is empty
-        guard let bookTitle = bookTitleTextField.text, bookTitleTextField.text?.isEmpty == false else {
-            print("Book title is empty")
+        // check if book title & total pages is empty
+        if bookTitleTextField.text?.isEmpty == true && totalPagesTextField.text?.isEmpty == true {
+            showToast(message: "All field must be filled")
             return
         }
-
-        // check if totalPages is empty
-        guard let totalPages = totalPagesTextField.text, totalPagesTextField.text?.isEmpty == false else {
-            print("Total pages is empty")
+        
+        // check if bookTitle is empty
+        if bookTitleTextField.text?.isEmpty == true {
+            showToast(message: "Book title must be filled")
+            return
+        }
+        
+        let totalPages = totalPagesTextField.text ?? ""
+        
+        // check if total pages is empty
+        if totalPagesTextField.text?.isEmpty == true {
+            showToast(message: "Total pages must be filled")
+            return
+        }
+        
+        // check if total pages is numeric
+        if Int(totalPages) == nil {
+            showToast(message: "Total pages must be numeric")
+            return
+        }
+        
+        // check if total pages is greater than 0
+        if Int(totalPages) ?? 0 <= 0 {
+            showToast(message: "Total pages must be greater than 0")
             return
         }
         
         let timeTarget = readingTimeTargetPicker.countDownDuration
         
-        // validate if totalPages have value more than 0 && time target is more than 15 minutes
-        if Int(totalPages) ?? 0 > 0 && timeTarget >= 900 {
-
-            let goal = Goal(bookTitle: bookTitle, totalPages: totalPages, timeTarget: timeTarget)
-            UserDefaults.standard.userGoal = goal
-            
-//            UserDefaults.standard.set(timeTarget, forKey: "timeTarget")
-//            UserDefaults.standard.set(totalPages, forKey: "totalPages")
-//            UserDefaults.standard.set(bookTitle, forKey: "bookTitle")
-         
-            
-            UserDefaults.standard.setOnboardingSeen()
-            navigationManager.show(screen: .goHome, inController: self)
-            
-            print("Create goal success")
-        
-        } else {
-            print("Total pages is less than or equal to 0 and time target must be more than 15 minutes")
+        // check if time target is more than or equals to 15 minutes
+        if timeTarget < 900 {
+            showToast(message: "Time target must be more than 15 minutes")
+            return
         }
         
+        // add all data to user default
+        let goal = Goal(bookTitle: bookTitleTextField.text ?? "", totalPages: totalPages, timeTarget: timeTarget)
+        UserDefaults.standard.userGoal = goal
         
-       
+        UserDefaults.standard.setOnboardingSeen()
+        navigationManager.show(screen: .goHome, inController: self)
+        print("Create goal success")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         bookTitleTextField.borderStyle = UITextField.BorderStyle.roundedRect
         totalPagesTextField.borderStyle = UITextField.BorderStyle.roundedRect
+    }
+    
+    func showToast(message: String){
+            
+        let toastMsg = UILabel()
+        toastMsg.text = message
+        toastMsg.textAlignment = .center;
+        toastMsg.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastMsg.textColor = UIColor.white
+        toastMsg.numberOfLines = 0
+        toastMsg.font = UIFont.systemFont(ofSize: 15)
+        
+        let textSize = toastMsg.intrinsicContentSize
+        let toastWidth = min(textSize.width, self.view.frame.size.height-150)
+        
+        toastMsg.frame = CGRect(x: self.view.frame.size.width/2-(textSize.width/2)-25, y: self.view.frame.size.height-150, width: toastWidth + 50, height: textSize.height + 10)
+        toastMsg.alpha = 1.0
+        toastMsg.layer.cornerRadius = 10;
+        toastMsg.clipsToBounds = true
+        self.view.addSubview(toastMsg)
+            
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastMsg.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastMsg.removeFromSuperview()
+        })
     }
 }
 
