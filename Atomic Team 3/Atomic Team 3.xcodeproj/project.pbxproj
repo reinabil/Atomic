@@ -24,6 +24,7 @@
 		DE8F56CE2803F9DD00C63C12 /* SettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */; };
 		DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351EC27FC482D00A5E0B5 /* Onboard.swift */; };
 		DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */; };
+		F19A94D82804C8FE0053F04A /* HomeSettedGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */; };
 		FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */; };
 		FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E3DC627FD925500096630 /* LatestPageViewController.swift */; };
 		FB93090C2804E72700BFEA49 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB93090B2804E72700BFEA49 /* Streak.swift */; };
@@ -50,6 +51,7 @@
 		DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettedHomeViewController.swift; sourceTree = "<group>"; };
 		DEB351EC27FC482D00A5E0B5 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBrain.swift; sourceTree = "<group>"; };
+		F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettedGoals.swift; sourceTree = "<group>"; };
 		FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsettedHomeViewController.swift; sourceTree = "<group>"; };
 		FB5E3DC627FD925500096630 /* LatestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPageViewController.swift; sourceTree = "<group>"; };
 		FB93090B2804E72700BFEA49 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */,
 				DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */,
 				DE0034C32803BF560074B663 /* LoadingViewController.swift */,
+				F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				FB93090E2804E7EA00BFEA49 /* UIButtonExt.swift in Sources */,
 				DE80133F27FD34D200901385 /* TimerViewController.swift in Sources */,
 				FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */,
+				F19A94D82804C8FE0053F04A /* HomeSettedGoals.swift in Sources */,
 				DC849F282803C25600B0D524 /* Goal.swift in Sources */,
 				DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */,
 				DCF132F127FDE3DF00B89229 /* SetGoalViewController.swift in Sources */,
