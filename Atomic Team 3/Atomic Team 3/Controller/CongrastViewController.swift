@@ -21,7 +21,6 @@ class CongrastViewController: UIViewController {
     }
     
     @IBAction func btnSetNewGoalClicked(_ sender: UIButton) {
-        self.navigationManager.show(screen: .setGoal, inController: self)
     }
     
 }

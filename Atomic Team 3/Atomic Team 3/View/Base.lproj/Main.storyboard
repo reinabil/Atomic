@@ -183,6 +183,7 @@
                                                     <action selector="btnSetNewGoalClicked:" destination="MQm-kE-nag" eventType="touchUpInside" id="FPA-Px-JzJ"/>
                                                     <action selector="cancelPressed:" destination="gPj-TI-Zxe" eventType="touchUpInside" id="a5i-Ph-96p"/>
                                                     <action selector="finishReadingGoalPressed:" destination="JnT-xI-3BM" eventType="touchUpInside" id="6eU-FA-Epb"/>
+                                                    <segue destination="sbI-vi-hJh" kind="show" id="Y1S-LR-yCl"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have accomplished your setted goals! What a dedication!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y8-Mj-N7d">
@@ -548,6 +549,7 @@
                         <viewLayoutGuide key="safeArea" id="6F4-eg-LHB"/>
                         <color key="backgroundColor" name="grey_bg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RC2-eE-yUG"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1094,6 +1096,9 @@
             <point key="canvasLocation" x="-758" y="827"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y1S-LR-yCl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
         <image name="book" catalog="system" width="128" height="99"/>
@@ -1108,7 +1113,7 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="streak_emoji" width="52" height="52"/>
-        <image name="timer" width="85" height="84"/>
+        <image name="timer" width="255" height="252"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="grey_bg">
