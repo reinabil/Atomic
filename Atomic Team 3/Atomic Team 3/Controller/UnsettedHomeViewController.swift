@@ -49,7 +49,7 @@ class UnsettedHomeViewController: UIViewController{
     }
     
     @IBAction func setGoalPressed(_ sender: UIButton) {
-        navigationManager.show(screen: .setGoal, inController: self)
+       
     }
     
     private func passedUI(countt: Int) {
