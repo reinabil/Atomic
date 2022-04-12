@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class LatestPageViewController: UIViewController {
     @IBOutlet weak var whiteCard: UIView!
@@ -17,7 +18,32 @@ class LatestPageViewController: UIViewController {
     var count: Int!
     var lastDate: Date!
     
+    var player: AVAudioPlayer?
+
+    func playSound(soundName: String) {
+        guard let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
     override func viewDidLoad() {
+        playSound(soundName: "finish")
         whiteCard.layer.cornerRadius = 10
         self.dismissKeyboard()
         
@@ -35,6 +61,8 @@ class LatestPageViewController: UIViewController {
     }
     
     @IBAction func finishReadingGoalPressed(_ sender: UIButton) {
+        UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
+        print(UserDefaults.standard.latestPage)
         navigationManager.show(screen: .goHome, inController: self)
     }
     

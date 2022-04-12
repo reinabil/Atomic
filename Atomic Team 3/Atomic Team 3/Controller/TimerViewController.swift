@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class TimerViewController: UIViewController {
     @IBOutlet weak var whiteView: UIView!
     @IBOutlet weak var progressTimer: UIProgressView!
@@ -20,13 +21,12 @@ class TimerViewController: UIViewController {
     var isPlay = false
     
     var timer:Timer = Timer()
-    var count:Float =  Float(UserDefaults.standard.userGoal?.timeTarget ?? 60)// TIMER VALUE IN SECONDS
+    var count:Float =  3// TIMER VALUE IN SECONDS
     // Float(UserDefaults.standard.userGoal?.timeTarget ?? 60)
     var timerCounting:Bool = false
     var countLet:Float?
     private let navigationManager = NavigationManager()
-    
-    
+   
     override func viewDidLoad() {
     
         countLet = count

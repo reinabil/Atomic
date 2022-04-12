@@ -24,6 +24,7 @@
 		DE8F56CE2803F9DD00C63C12 /* SettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */; };
 		DEB351ED27FC482D00A5E0B5 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351EC27FC482D00A5E0B5 /* Onboard.swift */; };
 		DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */; };
+		DECEFF2828051CE900F1979D /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DECEFF2728051CE900F1979D /* finish.mp3 */; };
 		F19A94D82804C8FE0053F04A /* HomeSettedGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */; };
 		FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */; };
 		FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E3DC627FD925500096630 /* LatestPageViewController.swift */; };
@@ -51,6 +52,7 @@
 		DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettedHomeViewController.swift; sourceTree = "<group>"; };
 		DEB351EC27FC482D00A5E0B5 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
 		DEB351F027FC48B000A5E0B5 /* OnboardBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardBrain.swift; sourceTree = "<group>"; };
+		DECEFF2728051CE900F1979D /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = finish.mp3; path = Controller/finish.mp3; sourceTree = "<group>"; };
 		F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettedGoals.swift; sourceTree = "<group>"; };
 		FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsettedHomeViewController.swift; sourceTree = "<group>"; };
 		FB5E3DC627FD925500096630 /* LatestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPageViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				DE12F08527FBEFDF003A0FB0 /* SceneDelegate.swift */,
 				DCF132EC27FDE3A000B89229 /* TextField.swift */,
 				DEB351F227FC48B400A5E0B5 /* Controller */,
+				DECEFF2728051CE900F1979D /* finish.mp3 */,
 				DEB351EF27FC487C00A5E0B5 /* View */,
 				DEB351EE27FC487500A5E0B5 /* Model */,
 				DE12F09127FBEFE1003A0FB0 /* Info.plist */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE12F09027FBEFE1003A0FB0 /* LaunchScreen.storyboard in Resources */,
+				DECEFF2828051CE900F1979D /* finish.mp3 in Resources */,
 				DE12F08D27FBEFE1003A0FB0 /* Assets.xcassets in Resources */,
 				DE12F08B27FBEFDF003A0FB0 /* Main.storyboard in Resources */,
 			);
