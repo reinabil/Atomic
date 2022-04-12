@@ -91,9 +91,11 @@ class LatestPageViewController: UIViewController {
         // Complete button action handler
         let confirmDeleteButton = UIAlertAction(title: "Complete", style: .default, handler: {
             action in
-            UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
-            print(UserDefaults.standard.latestPage)
-            self.navigationManager.show(screen: .goHome, inController: self)
+//            UserDefaults.standard.latestPage = Float(UserDefaults.standard.userGoal?.totalPages ?? "100")
+//            print(UserDefaults.standard.latestPage)
+//            self.navigationManager.show(screen: .goHome, inController: self)
+            
+            self.deleteGoal()
         })
             
         alertDialog.addAction(backButton)
@@ -133,7 +135,7 @@ class LatestPageViewController: UIViewController {
         // delete the goal & redirected to home
         UserDefaults.standard.userGoal = nil
         UserDefaults.standard.latestPage = nil
-        navigationManager.show(screen: .firstTime, inController: self)
+        navigationManager.show(screen: .completeGoal, inController: self)
     }
     
     func showToast(message: String){

@@ -161,6 +161,7 @@ class SettedHomeViewController: UIViewController{
         let confirmDeleteButton = UIAlertAction(title: "Complete", style: .default, handler: {
             action in
             self.deleteGoal()
+            
         })
         
         alertDialog.addAction(backButton)
@@ -174,6 +175,6 @@ class SettedHomeViewController: UIViewController{
         // delete the goal & redirected to home
         UserDefaults.standard.userGoal = nil
         UserDefaults.standard.latestPage = nil
-        navigationManager.show(screen: .firstTime, inController: self)
+        navigationManager.show(screen: .completeGoal, inController: self)
     }
 }

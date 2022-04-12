@@ -29,6 +29,7 @@
 		DECEFF2C280525EC00F1979D /* AppTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECEFF2B280525EC00F1979D /* AppTimer.swift */; };
 		F19A94D82804C8FE0053F04A /* HomeSettedGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */; };
 		FB29A98C27FDE5610022F165 /* UnsettedHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */; };
+		FB4A2C182805BF2700200450 /* CongrastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A2C172805BF2700200450 /* CongrastViewController.swift */; };
 		FB5E3DC727FD925500096630 /* LatestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E3DC627FD925500096630 /* LatestPageViewController.swift */; };
 		FB93090C2804E72700BFEA49 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB93090B2804E72700BFEA49 /* Streak.swift */; };
 		FB93090E2804E7EA00BFEA49 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB93090D2804E7EA00BFEA49 /* UIButtonExt.swift */; };
@@ -59,6 +60,7 @@
 		DECEFF2B280525EC00F1979D /* AppTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTimer.swift; sourceTree = "<group>"; };
 		F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettedGoals.swift; sourceTree = "<group>"; };
 		FB29A98B27FDE5610022F165 /* UnsettedHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsettedHomeViewController.swift; sourceTree = "<group>"; };
+		FB4A2C172805BF2700200450 /* CongrastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongrastViewController.swift; sourceTree = "<group>"; };
 		FB5E3DC627FD925500096630 /* LatestPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestPageViewController.swift; sourceTree = "<group>"; };
 		FB93090B2804E72700BFEA49 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
 		FB93090D2804E7EA00BFEA49 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				DE8F56CD2803F9DD00C63C12 /* SettedHomeViewController.swift */,
 				DE0034C32803BF560074B663 /* LoadingViewController.swift */,
 				F19A94D72804C8FE0053F04A /* HomeSettedGoals.swift */,
+				FB4A2C172805BF2700200450 /* CongrastViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				F19A94D82804C8FE0053F04A /* HomeSettedGoals.swift in Sources */,
 				DC849F282803C25600B0D524 /* Goal.swift in Sources */,
 				DEB351F127FC48B000A5E0B5 /* OnboardBrain.swift in Sources */,
+				FB4A2C182805BF2700200450 /* CongrastViewController.swift in Sources */,
 				DCF132F127FDE3DF00B89229 /* SetGoalViewController.swift in Sources */,
 				DCF132EF27FDE3D100B89229 /* EditGoalViewController.swift in Sources */,
 				DE0034C82803C4AD0074B663 /* NavigationManager.swift in Sources */,
@@ -395,9 +399,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YH7J3D49RU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Atomic Team 3/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Readify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -424,9 +429,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YH7J3D49RU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Atomic Team 3/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Readify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

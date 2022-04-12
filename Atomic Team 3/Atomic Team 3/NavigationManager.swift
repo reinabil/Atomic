@@ -15,6 +15,7 @@ class NavigationManager {
         case setGoal
         case goHome
         case finish
+        case completeGoal
     }
     
     func show(screen: Screen, inController: UIViewController) {
@@ -36,7 +37,8 @@ class NavigationManager {
             
         case .finish:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LatestPageViewController")
-            
+        case .completeGoal:
+            viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "CongrastViewController")
         }
         
         
