@@ -112,6 +112,7 @@ class LatestPageViewController: UIViewController {
 //            print(UserDefaults.standard.latestPage)
 //            self.navigationManager.show(screen: .goHome, inController: self)
             
+            self.updateStreak()
             self.deleteGoal()
         })
             
@@ -168,7 +169,7 @@ class LatestPageViewController: UIViewController {
         let textSize = toastMsg.intrinsicContentSize
         let toastWidth = min(textSize.width, self.view.frame.size.height-150)
         
-        toastMsg.frame = CGRect(x: self.view.frame.size.width/2-(textSize.width/2)-25, y: self.view.frame.size.height-150, width: toastWidth + 50, height: textSize.height + 10)
+        toastMsg.frame = CGRect(x: self.view.frame.size.width/2-(textSize.width/2)-25, y: self.view.frame.size.height-105, width: toastWidth + 50, height: textSize.height + 10)
         toastMsg.alpha = 1.0
         toastMsg.layer.cornerRadius = 10;
         toastMsg.clipsToBounds = true
