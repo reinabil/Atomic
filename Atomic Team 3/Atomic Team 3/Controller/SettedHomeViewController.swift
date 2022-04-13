@@ -52,7 +52,8 @@ class SettedHomeViewController: UIViewController{
         userProgress = ((latestPage ?? 0)/totalPages! ?? 0) * 100
         
         bookProgress.text = String(format: "%.0f", userProgress!) + "%"
-        bookTitle.text = UserDefaults.standard.userGoal?.bookTitle
+        var bookTitleVar = UserDefaults.standard.userGoal?.bookTitle
+        bookTitle.text = "📘 \(bookTitleVar!)"
         
         progressBar1.progress = CGFloat((latestPage! ?? 0) / (totalPages! ?? 0))
         
